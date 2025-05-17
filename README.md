@@ -40,9 +40,7 @@ docker push darcylambrick/crud-app
 Apply the following Kubernetes files:
 
 ```bash
-kubectl apply -f mongo-secret.yaml
-kubectl apply -f app-deployment.yaml
-kubectl apply -f service.yaml
+kubectl apply -f k8s/
 ```
 
 > Update your `crud-app-deployment.yaml` to use your Docker image and `MONGO_URI` secret.
@@ -52,7 +50,7 @@ kubectl apply -f service.yaml
 Use `kubectl port-forward`:
 
 ```bash
-kubectl port-forward service/crud-app-service 3000:3000
+kubectl port-forward service/crud-app-service 3000:80
 ```
 
 Then go to:

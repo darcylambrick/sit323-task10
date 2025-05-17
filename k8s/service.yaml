@@ -1,0 +1,17 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: crud-app
+  labels:
+    app: crud-app
+  annotations:
+    prometheus.io/scrape: 'true'
+    prometheus.io/path: /metrics
+    prometheus.io/port: '3000'
+spec:
+  selector:
+    app: crud-app
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
