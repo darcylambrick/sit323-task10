@@ -58,7 +58,10 @@ Then go to:
 ```
 http://localhost:3000
 ```
-
+or
+```
+http://34.46.230.152/
+```
 ---
 
 ## 🔄 Redeploy After Changes
